@@ -1,0 +1,118 @@
+<HTML>
+
+    <div class="grid-container">
+        <div class="header">
+
+            <div class="header-text"> 
+                <h1>Angular Gallery App</h1>
+            </div>
+            <p> This app shows a demonstration of a number of Angular features</p>
+        </div>
+        <div class="binding-if-style-container">
+          <div class="binding">
+            
+            
+            <h3>Two Way Data Binding</h3>
+            <div>Type in the box!</div>
+            <br>
+              <input 
+                type="text" 
+                [(ngModel)]="bindingExample">
+              <div>{{ bindingExample }}</div>
+          </div>
+          <div class="ng-if">
+            <h3>NG-If</h3>
+
+            <div>
+                <p *ngIf="ngIfExampleVar">
+                    This will disappear (or appear) when you click the button!
+                </p>
+    
+                <button (click)="ngIfExampleFun($event)">{{ ngIfBtnLbl }}</button>
+    
+            </div>
+          </div>
+          <div class="ng-style">
+            <h3>NG-Style</h3>
+            <p [ngStyle]="{ 'color': ngStyleExampleVar === 'black' ? 'black' : 'red' }">
+            This will turn red when you click the button!
+            </p>
+    
+             <button (click)="ngStyleExamplefun($event)">{{ ngStyleBtnLbl }}</button>
+          </div>
+        </div>
+        <div class="ng-for">
+            <h3>NG-For</h3>
+
+    <ul>
+        <li *ngFor="let food of listOfFood"> A {{food.name}} is a {{food.type}}</li>
+      </ul>
+        </div>
+        <div class="ng-switch">
+            <h3>NG-Switch</h3>
+
+    <ul *ngFor="let food of listOfFood"
+    [ngSwitch]="food.type"> 
+
+  <li *ngSwitchCase="'seed'" class="seedColor">A {{food.name}} is a {{food.type}} (seems <i>seedy</i> to me...)
+  </li>
+  <li *ngSwitchCase="'berry'" class="berryColor">A {{food.name}} is a {{food.type}} (it's <i>berry</i> good!)
+  </li>
+  <li *ngSwitchCase="'fruit'" class="fruitColor">A {{food.name}} is a {{food.type}}
+  </li>
+  <li *ngSwitchCase="'herb'" class="herbColor">A {{food.name}} is a {{food.type}}
+  </li>
+  <li *ngSwitchDefault >A {{food.name}} is a {{food.type}}
+  </li>
+</ul>
+        </div>
+        <div class="form">
+            <h3>A Simple Form</h3>
+        
+        <div>
+           
+            <a routerLink="/page-two">Click Here to Fill Out a Form!</a>
+            <br>
+            <br>
+
+            <div>The Following Forms Have Been Submitted:</div>
+            <br>
+            
+            <ul>
+                <li *ngFor="let entry of formContent"> User {{entry.clientName}} at {{entry.emailAddress}}</li>
+              </ul>
+
+             <!-- <button (click)="writeTest($event)">Test the Setter</button>-->
+              
+
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+ 
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    </HTML>
+

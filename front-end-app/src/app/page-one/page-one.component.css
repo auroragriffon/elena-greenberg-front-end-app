@@ -1,0 +1,91 @@
+
+html{
+    background-color: aliceblue;
+}
+
+h3 {
+    text-align: center;
+}
+.fruitColor {
+color: rgb(170, 24, 24);
+}
+
+.herbColor {
+    color: rgb(13, 114, 21);
+    }
+
+.seedColor {
+        color: rgb(100, 54, 1);
+        }    
+
+.berryColor {
+            color: rgb(158, 6, 125);
+            }
+
+.grid-container {
+    padding: 10px;
+    border: 20px solid rgb(147, 250, 245);  
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr 1fr;
+  grid-template-rows: 0.6fr 0.9fr 1.2fr 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "header header header header"
+    "binding-if-style-container binding-if-style-container binding-if-style-container binding-if-style-container"
+    "ng-for ng-for ng-switch ng-switch"
+    "form form form form";
+}
+.header { 
+
+    border: 5px solid rgb(70, 70, 70);  
+    padding: 10px;
+    text-align: center;
+    grid-area: header; 
+}
+.binding-if-style-container {
+    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "binding ng-if ng-style";
+  grid-area: binding-if-style-container;
+}
+.binding { 
+    
+    background-color: rgb(241, 188, 221);
+    border: 5px solid rgb(243, 119, 196);  
+    padding: 10px;
+    grid-area: binding; 
+}
+.ng-if { 
+    background-color:  rgb(226, 166, 164);
+    border: 5px solid rgb(194, 63, 59);  
+    padding: 10px;
+    grid-area: ng-if; 
+}
+.ng-style { 
+    background-color: rgb(175, 252, 188);
+    border: 5px solid rgb(93, 255, 120);  
+    padding: 10px;
+    grid-area: ng-style; 
+}
+.ng-for { 
+    background-color: rgb(243, 235, 165);
+    border: 5px solid rgb(255, 237, 72);  
+    padding: 10px;
+    grid-area: ng-for; 
+}
+.ng-switch { 
+    background-color: rgb(255, 195, 139);
+    border: 5px solid rgb(253, 144, 43);  
+    padding: 10px;
+    grid-area: ng-switch; 
+}
+.form { 
+    text-align: center;
+    border: 5px solid rgb(53, 3, 42);  
+    padding: 10px;
+    grid-area: form; 
+}
